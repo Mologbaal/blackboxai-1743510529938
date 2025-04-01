@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FlaxUI>
+  <Canvas Width="1920" Height="1080">
+    <!-- Background -->
+    <Image Name="Background" AnchorPreset="StretchAll" Color="0x111111FF">
+      <Texture>
+        <Asset Guid="i5i5i5i5-i5i5-i5i5-i5i5-i5i5i5i5i5i5" Path="Assets/Textures/UI/LobbyBackground.jpg"/>
+      </Texture>
+    </Image>
+
+    <!-- Title -->
+    <Text Name="Title" AnchorPreset="TopCenter" Position="0,100" Size="800,120" FontSize="72" 
+          Text="Multiplayer Lobby" Color="0xFFFFFFFF" Font="Assets/Fonts/MainFont.ttf">
+      <Shadow Offset="5,5" Color="0x000000AA"/>
+    </Text>
+
+    <!-- Player List -->
+    <Panel Name="PlayerPanel" AnchorPreset="Center" Position="0,-100" Size="800,400" Color="0x222222AA">
+      <Text Name="PlayerListTitle" Position="0,10" Size="800,50" FontSize="36" 
+            Text="Connected Players" HorizontalAlignment="Center" Color="0xFFFFFFFF"/>
+
+      <!-- Player Slots -->
+      <Panel Name="PlayerSlot1" Position="50,70" Size="700,60" Color="0x333333FF">
+        <Text Name="Player1Name" Position="20,0" Size="300,60" Text="Player 1" FontSize="24" 
+              VerticalAlignment="Center" Color="0xFFFFFFFF"/>
+        <Text Name="Player1Faction" Position="350,0" Size="300,60" Text="Human Alliance" FontSize="24" 
+              VerticalAlignment="Center" Color="0xFFFFFFFF"/>
+      </Panel>
+
+      <Panel Name="PlayerSlot2" Position="50,140" Size="700,60" Color="0x333333FF">
+        <Text Name="Player2Name" Position="20,0" Size="300,60" Text="Empty Slot" FontSize="24" 
+              VerticalAlignment="Center" Color="0xAAAAAAFF"/>
+        <Text Name="Player2Faction" Position="350,0" Size="300,60" Text="-" FontSize="24" 
+              VerticalAlignment="Center" Color="0xAAAAAAFF"/>
+      </Panel>
+
+      <Panel Name="PlayerSlot3" Position="50,210" Size="700,60" Color="0x333333FF">
+        <Text Name="Player3Name" Position="20,0" Size="300,60" Text="Empty Slot" FontSize="24" 
+              VerticalAlignment="Center" Color="0xAAAAAAFF"/>
+        <Text Name="Player3Faction" Position="350,0" Size="300,60" Text="-" FontSize="24" 
+              VerticalAlignment="Center" Color="0xAAAAAAFF"/>
+      </Panel>
+
+      <Panel Name="PlayerSlot4" Position="50,280" Size="700,60" Color="0x333333FF">
+        <Text Name="Player4Name" Position="20,0" Size="300,60" Text="Empty Slot" FontSize="24" 
+              VerticalAlignment="Center" Color="0xAAAAAAFF"/>
+        <Text Name="Player4Faction" Position="350,0" Size="300,60" Text="-" FontSize="24" 
+              VerticalAlignment="Center" Color="0xAAAAAAFF"/>
+      </Panel>
+    </Panel>
+
+    <!-- Ready Button -->
+    <Button Name="ReadyButton" AnchorPreset="BottomCenter" Position="0,-100" Size="300,80" 
+            OnClick="OnReadyClicked">
+      <Text Name="ReadyText" Size="300,80" Text="Ready" FontSize="32" 
+            HorizontalAlignment="Center" VerticalAlignment="Center" Color="0xFFFFFFFF"/>
+    </Button>
+
+    <!-- Start Game Button (Host Only) -->
+    <Button Name="StartButton" AnchorPreset="BottomCenter" Position="0,-200" Size="300,80" 
+            IsVisible="false" OnClick="OnStartClicked">
+      <Text Name="StartText" Size="300,80" Text="Start Game" FontSize="32" 
+            HorizontalAlignment="Center" VerticalAlignment="Center" Color="0xFFFFFFFF"/>
+    </Button>
+  </Canvas>
+</FlaxUI>
