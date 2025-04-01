@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FlaxUI>
+  <Canvas Width="1920" Height="1080">
+    <!-- Top Bar - Resources -->
+    <Panel Name="ResourceBar" AnchorPreset="TopStretch" Position="0,0" Size="0,60" Color="0x222222AA">
+      <!-- Minerals -->
+      <Panel Name="MineralsPanel" Position="400,10" Size="200,40">
+        <Image Name="MineralsIcon" Position="0,0" Size="40,40">
+          <Texture>
+            <Asset Guid="e1e1e1e1-e1e1-e1e1-e1e1-e1e1e1e1e1e1" Path="Assets/Textures/UI/MineralsIcon.png"/>
+          </Texture>
+        </Image>
+        <Text Name="MineralsText" Position="50,0" Size="150,40" Text="1000" FontSize="24" 
+              VerticalAlignment="Center" Color="0xFFFFFFFF"/>
+      </Panel>
+
+      <!-- Energy -->
+      <Panel Name="EnergyPanel" Position="650,10" Size="200,40">
+        <Image Name="EnergyIcon" Position="0,0" Size="40,40">
+          <Texture>
+            <Asset Guid="f2f2f2f2-f2f2-f2f2-f2f2-f2f2f2f2f2f2" Path="Assets/Textures/UI/EnergyIcon.png"/>
+          </Texture>
+        </Image>
+        <Text Name="EnergyText" Position="50,0" Size="150,40" Text="500" FontSize="24" 
+              VerticalAlignment="Center" Color="0xFFFFFFFF"/>
+      </Panel>
+
+      <!-- Population -->
+      <Panel Name="PopulationPanel" Position="900,10" Size="200,40">
+        <Image Name="PopulationIcon" Position="0,0" Size="40,40">
+          <Texture>
+            <Asset Guid="g3g3g3g3-g3g3-g3g3-g3g3-g3g3g3g3g3g3" Path="Assets/Textures/UI/PopulationIcon.png"/>
+          </Texture>
+        </Image>
+        <Text Name="PopulationText" Position="50,0" Size="150,40" Text="10/20" FontSize="24" 
+              VerticalAlignment="Center" Color="0xFFFFFFFF"/>
+      </Panel>
+    </Panel>
+
+    <!-- Bottom Left - Unit Controls -->
+    <Panel Name="UnitPanel" AnchorPreset="BottomLeft" Position="20,-20" Size="400,200" Color="0x222222AA">
+      <Text Name="UnitName" Position="10,10" Size="380,30" Text="Selected Unit" FontSize="24" 
+            HorizontalAlignment="Left" Color="0xFFFFFFFF"/>
+      
+      <ProgressBar Name="HealthBar" Position="10,50" Size="380,20" Value="0.75">
+        <BackgroundColor>0x444444FF</BackgroundColor>
+        <ProgressColor>0xFF0000FF</ProgressColor>
+      </ProgressBar>
+
+      <Button Name="AttackButton" Position="10,80" Size="120,40" OnClick="OnAttackCommand">
+        <Text Name="AttackText" Size="120,40" Text="Attack" FontSize="18" 
+              HorizontalAlignment="Center" VerticalAlignment="Center" Color="0xFFFFFFFF"/>
+      </Button>
+
+      <Button Name="MoveButton" Position="140,80" Size="120,40" OnClick="OnMoveCommand">
+        <Text Name="MoveText" Size="120,40" Text="Move" FontSize="18" 
+              HorizontalAlignment="Center" VerticalAlignment="Center" Color="0xFFFFFFFF"/>
+      </Button>
+
+      <Button Name="SpecialButton" Position="270,80" Size="120,40" OnClick="OnSpecialCommand">
+        <Text Name="SpecialText" Size="120,40" Text="Special" FontSize="18" 
+              HorizontalAlignment="Center" VerticalAlignment="Center" Color="0xFFFFFFFF"/>
+      </Button>
+    </Panel>
+
+    <!-- Bottom Right - Minimap -->
+    <Panel Name="MinimapPanel" AnchorPreset="BottomRight" Position="-20,-20" Size="300,300" Color="0x222222AA">
+      <Image Name="MinimapImage" Position="10,10" Size="280,280">
+        <Texture>
+          <Asset Guid="h4h4h4h4-h4h4-h4h4-h4h4-h4h4h4h4h4h4" Path="Assets/Textures/UI/Minimap.png"/>
+        </Texture>
+      </Image>
+    </Panel>
+  </Canvas>
+</FlaxUI>
