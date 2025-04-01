@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FlaxUI>
+  <Canvas Width="1920" Height="1080">
+    <!-- Background -->
+    <Image Name="Background" AnchorPreset="StretchAll" Color="0x111111FF">
+      <Texture>
+        <Asset Guid="a0a0a0a0-a0a0-a0a0-a0a0-a0a0a0a0a0a0" Path="Assets/Textures/UI/MenuBackground.jpg"/>
+      </Texture>
+    </Image>
+
+    <!-- Title -->
+    <Text Name="Title" AnchorPreset="TopCenter" Position="0,100" Size="800,120" FontSize="72" 
+          Text="Planetary Conquest" Color="0xFFFFFFFF" Font="Assets/Fonts/MainFont.ttf">
+      <Shadow Offset="5,5" Color="0x000000AA"/>
+    </Text>
+
+    <!-- Faction Selection -->
+    <Panel Name="FactionPanel" AnchorPreset="Center" Position="0,0" Size="1000,500">
+      <Text Name="FactionTitle" Position="0,0" Size="1000,80" FontSize="48" 
+            Text="Select Your Faction" HorizontalAlignment="Center" Color="0xFFFFFFFF"/>
+
+      <!-- Human Faction -->
+      <Button Name="HumanButton" Position="50,100" Size="250,300" OnClick="OnHumanSelected">
+        <Image Name="HumanImage" Size="250,250" Color="0x0000FFFF">
+          <Texture>
+            <Asset Guid="b1b1b1b1-b1b1-b1b1-b1b1-b1b1b1b1b1b1" Path="Assets/Textures/Factions/HumanIcon.png"/>
+          </Texture>
+        </Image>
+        <Text Name="HumanText" Position="0,260" Size="250,40" Text="Human Alliance" 
+              HorizontalAlignment="Center" FontSize="24" Color="0xFFFFFFFF"/>
+      </Button>
+
+      <!-- Arachnid Faction -->
+      <Button Name="ArachnidButton" Position="375,100" Size="250,300" OnClick="OnArachnidSelected">
+        <Image Name="ArachnidImage" Size="250,250" Color="0x00FF00FF">
+          <Texture>
+            <Asset Guid="c2c2c2c2-c2c2-c2c2-c2c2-c2c2c2c2c2c2" Path="Assets/Textures/Factions/ArachnidIcon.png"/>
+          </Texture>
+        </Image>
+        <Text Name="ArachnidText" Position="0,260" Size="250,40" Text="Arachnid Swarm" 
+              HorizontalAlignment="Center" FontSize="24" Color="0xFFFFFFFF"/>
+      </Button>
+
+      <!-- Reptilian Faction -->
+      <Button Name="ReptilianButton" Position="700,100" Size="250,300" OnClick="OnReptilianSelected">
+        <Image Name="ReptilianImage" Size="250,250" Color="0xFF0000FF">
+          <Texture>
+            <Asset Guid="d3d3d3d3-d3d3-d3d3-d3d3-d3d3d3d3d3d3" Path="Assets/Textures/Factions/ReptilianIcon.png"/>
+          </Texture>
+        </Image>
+        <Text Name="ReptilianText" Position="0,260" Size="250,40" Text="Reptilian Dominion" 
+              HorizontalAlignment="Center" FontSize="24" Color="0xFFFFFFFF"/>
+      </Button>
+    </Panel>
+
+    <!-- Start Game Button -->
+    <Button Name="StartButton" AnchorPreset="BottomCenter" Position="0,-100" Size="300,80" 
+            IsEnabled="false" OnClick="OnStartGame">
+      <Text Name="StartText" Size="300,80" Text="Begin Conquest" FontSize="32" 
+            HorizontalAlignment="Center" VerticalAlignment="Center" Color="0xFFFFFFFF"/>
+    </Button>
+  </Canvas>
+</FlaxUI>
